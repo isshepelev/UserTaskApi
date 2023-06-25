@@ -32,6 +32,7 @@ public class UserController {
         User user = service.findById(userId);
         return user.getTasks();
     }
+
     @DeleteMapping("/deleteUser/{userId}")
     public void delete(@PathVariable Long userId){
         service.delete(userId);
